@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider, DefaultTheme } from "styled-components";
+import { Analytics } from "@vercel/analytics/react";
 import GlobalStyle from "../styles/globalStyles";
 
 const theme: DefaultTheme = {
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </>
   );
