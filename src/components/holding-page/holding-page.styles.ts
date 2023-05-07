@@ -41,7 +41,7 @@ export const Heading = styled.h1`
 `;
 
 export const Dot = styled(DotIcon)`
-  fill: ${({ theme }) => theme.backgroundColour.dark};
+  fill: ${({ theme }) => theme.textColour.accent};
 `;
 
 export const BriefParagraph = styled.p`
