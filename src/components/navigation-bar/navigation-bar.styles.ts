@@ -23,10 +23,13 @@ export const NavigationBarContent = styled.div`
 
 export const HomeLink = styled(Link)`
   text-decoration: none;
-  color: inherit;
+  color: ${({ theme }) => theme.textColour.accent};
   display: flex;
   font-size: 1.5rem;
 
+  span {
+    color: ${({ theme }) => theme.textColour.light};
+  }
   @media (min-width: 37.5em) {
     padding-left: 16px;
   }
