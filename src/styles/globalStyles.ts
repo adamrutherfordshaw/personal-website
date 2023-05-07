@@ -3,11 +3,12 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
   html,
   body {
+    background-color: ${({ theme }) => theme.backgroundColour.light};
+    color: ${({ theme }) => theme.textColour.dark};
+    height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
-    font-family: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+    font-family: 'Quicksand', sans-serif;
   }
 
   * {

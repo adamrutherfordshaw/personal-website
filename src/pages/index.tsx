@@ -1,8 +1,6 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
-import { HoldingPage } from "@/components/holding-page/holding-page";
 
-const inter = Inter({ subsets: ["latin"] });
+import { HoldingPage } from "@/components/holding-page/holding-page";
 
 export default function Home() {
   return (

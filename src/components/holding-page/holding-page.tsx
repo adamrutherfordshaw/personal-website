@@ -3,10 +3,23 @@ import * as Styled from "./holding-page.styles";
 export const HoldingPage = () => {
   return (
     <Styled.HoldingPageContainer>
-      <Styled.Heading>Adam Rutherford-Shaw</Styled.Heading>
-      <Styled.SubHeading>Software Developer</Styled.SubHeading>
+      <Styled.Intro>
+        <Styled.Header>
+          <Styled.Heading>
+            <span>Hey 👋</span>
+            <span>
+              I&apos;m Adam
+              <Styled.Dot />
+            </span>
+          </Styled.Heading>
 
-      <Styled.WebsiteLoading>Website in progress...</Styled.WebsiteLoading>
+          <Styled.BriefParagraph>
+            I&apos;m a front-end developer based near Manchester, UK.
+          </Styled.BriefParagraph>
+        </Styled.Header>
+
+        <Styled.IntroSVG />
+      </Styled.Intro>
     </Styled.HoldingPageContainer>
   );
 };

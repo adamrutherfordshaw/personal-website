@@ -1,12 +1,20 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import { Analytics } from "@vercel/analytics/react";
-import GlobalStyle from "../styles/globalStyles";
+
+import { NavigationBar } from "@/components/navigation-bar/navigation-bar";
+import GlobalStyle from "@/styles/globalStyles";
 
 const theme: DefaultTheme = {
-  colors: {
-    primary: "#111",
-    secondary: "#0070f3",
+  textColour: {
+    light: "#ffffff",
+    dark: "#1f1a3b",
+    accent: "#89B0AE",
+  },
+  backgroundColour: {
+    light: "#E3DEDE",
+    dark: "#1f1a3b",
+    accent: "#89B0AE",
   },
 };
 
@@ -15,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <NavigationBar />
         <Component {...pageProps} />
         <Analytics />
       </ThemeProvider>
