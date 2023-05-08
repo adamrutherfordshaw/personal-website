@@ -29,6 +29,7 @@ export const HomeLink = styled(Link)`
 
   span {
     color: ${({ theme }) => theme.textColour.light};
+    margin-inline: 8px;
   }
   @media (min-width: 37.5em) {
     padding-left: 16px;
