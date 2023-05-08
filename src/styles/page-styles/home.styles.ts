@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { DeveloperAtComputer } from "../pictogram/content/DeveloperAtComputer";
-import { DotIcon } from "../icon/content/dot";
 
-export const HoldingPageContainer = styled.div`
+import { DeveloperAtComputer } from "@/components/pictogram/content/DeveloperAtComputer";
+import { DotIcon } from "@/components/icon/content/dot";
+
+export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
