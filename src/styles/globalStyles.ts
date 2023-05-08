@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Quicksand', sans-serif;
   }
 
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
   * {
     box-sizing: border-box;
     padding: 0;
