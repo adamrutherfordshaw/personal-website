@@ -1,3 +1,7 @@
+import { Quicksand } from "next/font/google";
+const quicksand = Quicksand({
+  subsets: ["latin"],
+});
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -8,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
-    font-family: 'Quicksand', sans-serif;
+    font-family: ${quicksand.style.fontFamily};
   }
 
   main {
