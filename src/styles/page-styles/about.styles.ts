@@ -25,6 +25,7 @@ export const AboutMeSection = styled.div`
   gap: 32px;
   font-size: 1.25rem;
   width: min(60ch, 100%);
+  margin: 0 auto;
 `;
 
 export const AboutMeParagraph = styled.p``;
