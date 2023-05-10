@@ -6,16 +6,25 @@ import { NavigationBar } from "@/components/navigation-bar/navigation-bar";
 import GlobalStyle from "@/styles/globalStyles";
 
 const theme: DefaultTheme = {
-  textColour: {
-    light: "#ffffff",
-    dark: "#1f1a3b",
-    accent: "#89B0AE",
-    focus: "#ffff00"
+  colour: {
+    text: {
+      light: "#ffffff",
+      dark: "#1f1a3b",
+      accent: "#89B0AE",
+      focus: "#ffff00",
+    },
+    background: {
+      light: "#E3DEDE",
+      dark: "#1f1a3b",
+      accent: "#89B0AE",
+    },
   },
-  backgroundColour: {
-    light: "#E3DEDE",
-    dark: "#1f1a3b",
-    accent: "#89B0AE",
+  spacing: {
+    one: "0.25rem",
+    two: "0.5rem",
+    three: "1rem",
+    four: "2rem",
+    five: "4rem",
   },
 };
 

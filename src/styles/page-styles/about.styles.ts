@@ -5,8 +5,8 @@ export const AboutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 32px;
-  gap: 32px;
+  margin: ${({ theme }) => theme.spacing.four};
+  gap: ${({ theme }) => theme.spacing.four};
 `;
 
 export const ContentWrapper = styled.div`
@@ -22,7 +22,7 @@ export const Heading = styled.h1`
 export const AboutMeSection = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: ${({ theme }) => theme.spacing.four};
   font-size: 1.25rem;
   width: min(60ch, 100%);
   margin: 0 auto;

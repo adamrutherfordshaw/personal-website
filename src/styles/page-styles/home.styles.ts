@@ -7,8 +7,8 @@ export const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 32px;
-  gap: 32px;
+  margin: ${({ theme }) => theme.spacing.four};
+  gap: ${({ theme }) => theme.spacing.four};
 `;
 
 export const Intro = styled.div`
@@ -42,12 +42,12 @@ export const Heading = styled.h1`
 `;
 
 export const Dot = styled(DotIcon)`
-  fill: ${({ theme }) => theme.textColour.accent};
+  fill: ${({ theme }) => theme.colour.text.accent};
 `;
 
 export const BriefParagraph = styled.p`
-  margin-top: 12px;
-  margin-bottom: 24px;
+  margin-top: ${({ theme }) => theme.spacing.two};
+  margin-bottom: ${({ theme }) => theme.spacing.three};
   text-align: center;
 `;
 

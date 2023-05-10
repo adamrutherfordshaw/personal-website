@@ -2,16 +2,25 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    textColour: {
-      light: string;
-      dark: string;
-      accent: string;
-      focus: string;
+    colour: {
+      text: {
+        light: string;
+        dark: string;
+        accent: string;
+        focus: string;
+      };
+      background: {
+        light: string;
+        dark: string;
+        accent: string;
+      };
     };
-    backgroundColour: {
-      light: string;
-      dark: string;
-      accent: string;
+    spacing: {
+      one: string;
+      two: string;
+      three: string;
+      four: string;
+      five: string;
     };
   }
 }
