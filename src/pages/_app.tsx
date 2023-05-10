@@ -10,6 +10,7 @@ const theme: DefaultTheme = {
     light: "#ffffff",
     dark: "#1f1a3b",
     accent: "#89B0AE",
+    focus: "#ffff00"
   },
   backgroundColour: {
     light: "#E3DEDE",

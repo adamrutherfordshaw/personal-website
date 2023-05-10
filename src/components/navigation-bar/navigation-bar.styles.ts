@@ -27,12 +27,19 @@ export const HomeLink = styled(Link)`
   display: flex;
   font-size: 1.5rem;
 
+  :focus,
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.textColour.focus};
+  }
+
   span {
     color: ${({ theme }) => theme.textColour.light};
     margin-inline: 8px;
   }
+
   @media (min-width: 37.5em) {
-    padding-left: 16px;
+    margin-left: 16px;
   }
 `;
 
@@ -50,6 +57,12 @@ export const OpenDrawerButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
+
+  :focus,
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.textColour.focus};
+  }
 
   @media (min-width: 37.5em) {
     display: none;
@@ -89,14 +102,25 @@ export const NavLink = styled(Link)<{ isCurrentUrl: boolean }>`
     isCurrentUrl ? theme.backgroundColour.accent : "none"};
   padding: 1rem 0;
 
-  nav:has(a:hover) &:not(:hover) {
+  nav:has(a:is(:hover, :focus, :focus-visible))
+    &:not(:is(:hover, :focus, :focus-visible)) {
     color: inherit;
     background: none;
   }
 
-  nav:has(a) &:hover {
-    background: ${({ theme }) => theme.backgroundColour.accent};
-    color: ${({ theme }) => theme.textColour.dark};
+  nav:has(a) & {
+    :hover,
+    :focus,
+    :focus-visible {
+      background: ${({ theme }) => theme.backgroundColour.accent};
+      color: ${({ theme }) => theme.textColour.dark};
+    }
+  }
+
+  :focus,
+  :focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px ${({ theme }) => theme.textColour.focus};
   }
 
   @media (min-width: 37.5em) {
