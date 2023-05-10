@@ -19,10 +19,6 @@ const AboutPage = () => {
           <Styled.Heading>About Me</Styled.Heading>
           <Styled.ContentWrapper>
             <Styled.AboutMeSection>
-              {/* <Styled.AboutMeParagraph>
-              I&apos;m a front-end developer based near Manchester, UK.
-            </Styled.AboutMeParagraph> */}
-
               <Styled.AboutMeParagraph>
                 After finishing my A-Levels, to fulfil my passion for technology
                 and computer science, I decided to pursue a career in software
@@ -41,38 +37,8 @@ const AboutPage = () => {
                 frameworks, including React, Next, TypeScript, Node, GraphQL,
                 and more.
               </Styled.AboutMeParagraph>
-
-              {/* <Styled.TechnologiesList>
-              <Styled.TechnologiesListItem>React</Styled.TechnologiesListItem>
-              <Styled.TechnologiesListItem>Next</Styled.TechnologiesListItem>
-              <Styled.TechnologiesListItem>
-              TypeScript
-              </Styled.TechnologiesListItem>
-              <Styled.TechnologiesListItem>
-              Styled Components
-              </Styled.TechnologiesListItem>
-              <Styled.TechnologiesListItem>Next</Styled.TechnologiesListItem>
-              <Styled.TechnologiesListItem>Next</Styled.TechnologiesListItem>
-            </Styled.TechnologiesList> */}
             </Styled.AboutMeSection>
           </Styled.ContentWrapper>
-          {/* <Styled.Intro>
-            <Styled.Header>
-              <Styled.Heading>
-                <span>Hey 👋</span>
-                <span>
-                  I&apos;m Adam
-                  <Styled.Dot />
-                </span>
-              </Styled.Heading>
-
-              <Styled.BriefParagraph>
-                I&apos;m a front-end developer based near Manchester, UK.
-              </Styled.BriefParagraph>
-            </Styled.Header>
-
-            <Styled.IntroSVG />
-          </Styled.Intro> */}
         </Styled.AboutPageContainer>
       </main>
     </>

@@ -36,7 +36,3 @@ export const AboutMeSVG = styled(DeveloperByLaptop)`
   aspect-ratio: 5/2;
   align-self: center;
 `;
-
-export const TechnologiesList = styled.ul``;
-
-export const TechnologiesListItem = styled.li``;
