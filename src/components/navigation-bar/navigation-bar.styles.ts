@@ -27,7 +27,6 @@ export const HomeLink = styled(Link)`
   display: flex;
   font-size: 1.5rem;
 
-  :focus,
   :focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colour.text.focus};
@@ -58,7 +57,6 @@ export const OpenDrawerButton = styled.button`
   border: none;
   cursor: pointer;
 
-  :focus,
   :focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px ${({ theme }) => theme.colour.text.focus};
@@ -102,22 +100,19 @@ export const NavLink = styled(Link)<{ isCurrentUrl: boolean }>`
     isCurrentUrl ? theme.colour.background.accent : "none"};
   padding: 1rem 0;
 
-  nav:has(a:is(:hover, :focus, :focus-visible))
-    &:not(:is(:hover, :focus, :focus-visible)) {
+  nav:has(a:is(:hover, :focus-visible)) &:not(:is(:hover, :focus-visible)) {
     color: inherit;
     background: none;
   }
 
   nav:has(a) & {
     :hover,
-    :focus,
     :focus-visible {
       background: ${({ theme }) => theme.colour.background.accent};
       color: ${({ theme }) => theme.colour.text.dark};
     }
   }
 
-  :focus,
   :focus-visible {
     outline: none;
     box-shadow: inset 0 0 0 2px ${({ theme }) => theme.colour.text.focus};
