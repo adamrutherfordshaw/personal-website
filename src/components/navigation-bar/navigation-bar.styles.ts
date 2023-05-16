@@ -9,6 +9,10 @@ export const NavigationBarContainer = styled.section`
   align-items: center;
   background-color: ${({ theme }) => theme.colour.background.dark};
   color: white;
+
+  @media (min-width: 37.5em) {
+    padding: 0;
+  }
 `;
 
 export const NavigationBarContent = styled.div`
