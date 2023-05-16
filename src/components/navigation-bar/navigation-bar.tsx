@@ -21,10 +21,10 @@ export const NavigationBar = () => {
     //   name: "Projects",
     //   path: "/projects",
     // },
-    // {
-    //   name: "Contact",
-    //   path: "/contact",
-    // },
+    {
+      name: "Contact",
+      path: "/contact",
+    },
   ];
 
   const toggleDrawer = () => {
