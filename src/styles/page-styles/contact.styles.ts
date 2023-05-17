@@ -12,14 +12,14 @@ export const ContactPageContainer = styled.div`
   gap: ${({ theme }) => theme.spacing.four};
 `;
 
-export const ContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const Heading = styled.h1`
   text-align: center;
   font-weight: 400;
+`;
+
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ContactMeSection = styled.div`
@@ -34,13 +34,6 @@ export const ContactMeSection = styled.div`
 `;
 
 export const ContactMeParagraph = styled.p``;
-
-export const FocusSVG = styled(DeveloperFocussing)`
-  width: 90%;
-  height: auto;
-  aspect-ratio: 5/2;
-  align-self: center;
-`;
 
 export const SVGSocialContainer = styled.div``;
 
@@ -60,6 +53,13 @@ export const SocialLink = styled(Link)`
 export const LinkedInLogo = styled(LinkedInIcon)``;
 
 export const GitHubLogo = styled(GitHubIcon)``;
+
+export const FocusSVG = styled(DeveloperFocussing)`
+  width: 90%;
+  height: auto;
+  aspect-ratio: 5/2;
+  align-self: center;
+`;
 
 export const EmailLink = styled(Link)`
   text-decoration: none;
