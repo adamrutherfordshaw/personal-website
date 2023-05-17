@@ -104,6 +104,8 @@ export const NavLink = styled(Link)<{ isCurrentUrl: boolean }>`
     isCurrentUrl ? theme.colour.background.accent : "none"};
   padding: 1rem 0;
 
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
   nav:has(a:is(:hover, :focus-visible)) &:not(:is(:hover, :focus-visible)) {
     color: inherit;
     background: none;
