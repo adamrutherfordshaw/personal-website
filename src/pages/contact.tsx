@@ -32,7 +32,7 @@ const ContactPage = () => {
               <Styled.SVGSocialContainer>
                 <Styled.SocialsContainer>
                   <Styled.SocialLink
-                    href="https://www.linkedin.com/in/adam-rutherford-shaw/"
+                    href="https://www.linkedin.com/in/adamrutherfordshaw"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -40,7 +40,7 @@ const ContactPage = () => {
                   </Styled.SocialLink>
 
                   <Styled.SocialLink
-                    href="https://www.github.com/adam-rutherford-shaw"
+                    href="https://github.com/adamrutherfordshaw"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
