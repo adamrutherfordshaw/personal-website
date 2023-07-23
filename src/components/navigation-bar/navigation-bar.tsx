@@ -31,11 +31,15 @@ export const NavigationBar = () => {
     setShowingDrawer(!showingDrawer);
   };
 
+  const hideDrawer = () => {
+    setShowingDrawer(false);
+  };
+
   return (
     <>
       <Styled.NavigationBarContainer>
         <Styled.NavigationBarContent>
-          <Styled.HomeLink onClick={toggleDrawer} href="/">
+          <Styled.HomeLink onClick={hideDrawer} href="/">
             {"<"}
             <span>Adam</span>
             {"/>"}
@@ -63,7 +67,7 @@ export const NavigationBar = () => {
         <Styled.NavContent>
           {routes.map((route, index) => (
             <Styled.NavLink
-              onClick={toggleDrawer}
+              onClick={hideDrawer}
               href={route.path}
               isCurrentUrl={pathname === route.path}
               key={`nav-link-${index}`}
