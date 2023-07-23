@@ -95,7 +95,7 @@ export const NavContent = styled.nav`
   flex-direction: column;
 `;
 
-export const NavLink = styled(Link)<{ isCurrentUrl: boolean }>`
+export const NavLink = styled(Link)<{ $isCurrentUrl: boolean }>`
   text-decoration: none;
   font-size: 2rem;
   color: ${({ isCurrentUrl, theme }) =>

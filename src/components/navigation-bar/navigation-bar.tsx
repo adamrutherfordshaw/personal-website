@@ -49,7 +49,7 @@ export const NavigationBar = () => {
             {routes.map((route, index) => (
               <Styled.NavLink
                 href={route.path}
-                isCurrentUrl={pathname === route.path}
+                $isCurrentUrl={pathname === route.path}
                 key={`nav-link-${index}`}
               >
                 {route.name}
@@ -69,7 +69,7 @@ export const NavigationBar = () => {
             <Styled.NavLink
               onClick={hideDrawer}
               href={route.path}
-              isCurrentUrl={pathname === route.path}
+              $isCurrentUrl={pathname === route.path}
               key={`nav-link-${index}`}
             >
               {route.name}
