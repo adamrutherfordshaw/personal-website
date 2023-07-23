@@ -98,10 +98,10 @@ export const NavContent = styled.nav`
 export const NavLink = styled(Link)<{ $isCurrentUrl: boolean }>`
   text-decoration: none;
   font-size: 2rem;
-  color: ${({ isCurrentUrl, theme }) =>
-    isCurrentUrl ? theme.colour.text.dark : "inherit"};
-  background: ${({ isCurrentUrl, theme }) =>
-    isCurrentUrl ? theme.colour.background.accent : "none"};
+  color: ${({ $isCurrentUrl, theme }) =>
+    $isCurrentUrl ? theme.colour.text.dark : "inherit"};
+  background: ${({ $isCurrentUrl, theme }) =>
+    $isCurrentUrl ? theme.colour.background.accent : "none"};
   padding: 1rem 0;
 
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
