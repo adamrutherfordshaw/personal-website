@@ -46,31 +46,45 @@ export const NavigationBar = () => {
           </Styled.HomeLink>
 
           <Styled.NavLinksContainer>
-            {routes.map((route, index) => (
-              <Styled.NavLink
-                href={route.path}
-                $isCurrentUrl={pathname === route.path}
-                key={`nav-link-${index}`}
-              >
-                {route.name}
-              </Styled.NavLink>
-            ))}
+            {routes.map((route) => {
+              const isCurrentUrl = pathname === route.path;
+
+              return isCurrentUrl ? (
+                <Styled.NavLink
+                  $isCurrentUrl
+                  key={`nav-link-${route.name}`}
+                  as="span"
+                >
+                  {route.name}
+                </Styled.NavLink>
+              ) : (
+                <Styled.NavLink
+                  href={route.path}
+                  key={`nav-link-${route.name}`}
+                >
+                  {route.name}
+                </Styled.NavLink>
+              );
+            })}
           </Styled.NavLinksContainer>
 
-          <Styled.OpenDrawerButton onClick={toggleDrawer}>
+          <Styled.ToggleDrawerButton
+            onClick={toggleDrawer}
+            aria-label={`${showingDrawer ? 'Close' : 'Open'} Drawer`}
+          >
             <MenuIcon />
-          </Styled.OpenDrawerButton>
+          </Styled.ToggleDrawerButton>
         </Styled.NavigationBarContent>
       </Styled.NavigationBarContainer>
 
       <Styled.OverlayNavContainer showingDrawer={showingDrawer}>
         <Styled.NavContent>
-          {routes.map((route, index) => (
+          {routes.map((route) => (
             <Styled.NavLink
               onClick={hideDrawer}
               href={route.path}
               $isCurrentUrl={pathname === route.path}
-              key={`nav-link-${index}`}
+              key={`nav-link-${route.name}`}
             >
               {route.name}
             </Styled.NavLink>

@@ -55,7 +55,7 @@ export const NavLinksContainer = styled.nav`
   }
 `;
 
-export const OpenDrawerButton = styled.button`
+export const ToggleDrawerButton = styled.button`
   display: flex;
   background: none;
   border: none;
@@ -95,7 +95,9 @@ export const NavContent = styled.nav`
   flex-direction: column;
 `;
 
-export const NavLink = styled(Link)<{ $isCurrentUrl: boolean }>`
+export const NavSpan = styled.span``;
+
+export const NavLink = styled(Link) <{ $isCurrentUrl?: boolean }>`
   text-decoration: none;
   font-size: 2rem;
   color: ${({ $isCurrentUrl, theme }) =>
@@ -104,7 +106,9 @@ export const NavLink = styled(Link)<{ $isCurrentUrl: boolean }>`
     $isCurrentUrl ? theme.colour.background.accent : "none"};
   padding: 1rem 0;
 
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 
   nav:has(a:is(:hover, :focus-visible)) &:not(:is(:hover, :focus-visible)) {
     color: inherit;
