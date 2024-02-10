@@ -1,3 +1,3 @@
 export interface SchemaProps {
-    schema: Object | Array<Object>
+    schema: object | Array<object>
 }
