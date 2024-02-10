@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import * as Styled from "@/styles/page-styles/about.styles";
+import { aboutMeCopy } from "@/copy/about.copy";
 
 const AboutPage = () => {
   return (
@@ -20,22 +21,17 @@ const AboutPage = () => {
           <Styled.ContentWrapper>
             <Styled.AboutMeSection>
               <Styled.AboutMeParagraph>
-                After finishing my A-Levels, to fulfil my passion for technology
-                and computer science, I decided to pursue a career in software
-                engineering. I did this by completing a software developer
-                apprenticeship working in partnership with Manchester Digital.
-                Since then, I have continued my career as a professional
-                developer, responsible for creating and maintaining digital
-                products for a FTSE 100 company.
+                {aboutMeCopy.content[0]}
+              </Styled.AboutMeParagraph>
+
+              <Styled.AboutMeParagraph>
+                {aboutMeCopy.content[1]}
               </Styled.AboutMeParagraph>
 
               <Styled.AboutMeSVG />
 
               <Styled.AboutMeParagraph>
-                During my time as a professional developer, I&apos;ve gained
-                experience through exposure to a wide range of technologies and
-                frameworks, including React, Next, TypeScript, Node, GraphQL,
-                and more.
+                {aboutMeCopy.content[2]}
               </Styled.AboutMeParagraph>
             </Styled.AboutMeSection>
           </Styled.ContentWrapper>
