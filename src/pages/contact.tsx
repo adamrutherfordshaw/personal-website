@@ -35,6 +35,7 @@ const ContactPage = () => {
                     href="https://www.linkedin.com/in/adamrutherfordshaw"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                   >
                     <Styled.LinkedInLogo />
                   </Styled.SocialLink>
@@ -43,6 +44,7 @@ const ContactPage = () => {
                     href="https://github.com/adamrutherfordshaw"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="GitHub"
                   >
                     <Styled.GitHubLogo />
                   </Styled.SocialLink>
