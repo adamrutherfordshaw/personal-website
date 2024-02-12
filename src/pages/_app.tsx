@@ -1,44 +1,48 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider, DefaultTheme } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { NavigationBar } from "@/components/navigation-bar/navigation-bar";
 import GlobalStyle from "@/styles/globalStyles";
+import { useContext } from "react";
+import { AppProvider, AppStateContext } from "@/context/context";
+import { appThemes } from "@/themes/themes";
+import { getCookie } from "cookies-next";
+import { NextPageContext } from "next";
 
-const theme: DefaultTheme = {
-  colour: {
-    text: {
-      light: "#ffffff",
-      dark: "#1f1a3b",
-      accent: "#89B0AE",
-      focus: "#ffff00",
-    },
-    background: {
-      light: "#E3DEDE",
-      dark: "#1f1a3b",
-      accent: "#89B0AE",
-    },
-  },
-  spacing: {
-    one: "0.25rem",
-    two: "0.5rem",
-    three: "1rem",
-    four: "2rem",
-    five: "4rem",
-  },
-};
+export interface InitialProps {
+  themeName?: string;
+}
 
-export default function App({ Component, pageProps }: AppProps) {
+export const App = (props: AppProps & InitialProps) => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <NavigationBar />
-        <Component {...pageProps} />
-        <Analytics />
-        <SpeedInsights />
-      </ThemeProvider>
-    </>
+    <AppProvider initialTheme={props.themeName}>
+      <Website {...props} />
+    </AppProvider>
   );
 }
+
+export const Website = ({ Component, pageProps }: AppProps) => {
+  const { theme } = useContext(AppStateContext);
+
+  return (
+    <ThemeProvider theme={appThemes[theme]}>
+      <GlobalStyle />
+      <NavigationBar />
+      <Component {...pageProps} />
+      <Analytics />
+      <SpeedInsights />
+    </ThemeProvider>
+  );
+}
+
+App.getInitialProps = ({ ctx }: { ctx: NextPageContext }): InitialProps => {
+  const themeName = getCookie("themeName", { req: ctx.req });
+
+  return {
+    themeName,
+  };
+}
+
+export default App;

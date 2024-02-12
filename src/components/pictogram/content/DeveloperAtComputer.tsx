@@ -1,7 +1,17 @@
+import { useContext } from "react";
 import { Pictogram } from "../pictogram";
 import { PictogramProps } from "../pictogram.types";
+import { AppDispatchContext } from "@/context/context";
+import { AppReducerActionType } from "@/context/types";
+import { useTheme } from "styled-components";
 
 export const DeveloperAtComputer = (props: PictogramProps) => {
+  const dispatch = useContext(AppDispatchContext);
+
+  const theme = useTheme();
+
+  const accentColour = theme.colour.text.accent;
+
   return (
     <Pictogram
       xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +46,7 @@ export const DeveloperAtComputer = (props: PictogramProps) => {
       <path
         d="M704.99939,506.52881V590.1092a2.20523,2.20523,0,0,0,2.20141,2.20141H832.08626a2.20522,2.20522,0,0,0,2.20141-2.20141V506.52881a2.20621,2.20621,0,0,0-2.20141-2.206H707.2008A2.20623,2.20623,0,0,0,704.99939,506.52881Z"
         transform="translate(-206.59003 -163.87113)"
-        fill="#89b0ae"
+        fill={accentColour}
       />
       <path
         d="M699.36376,607.881a2.46985,2.46985,0,0,0,1.94346.92984H837.29917a2.5024,2.5024,0,0,0,2.44606-3.0157l-2.111-10.02722a2.50694,2.50694,0,0,0-1.55811-1.81784,2.42467,2.42467,0,0,0-.888-.1675H703.40985a2.42446,2.42446,0,0,0-.888.1675,2.50671,2.50671,0,0,0-1.55811,1.81784l-2.111,10.02722A2.5005,2.5005,0,0,0,699.36376,607.881Z"
@@ -712,17 +722,17 @@ export const DeveloperAtComputer = (props: PictogramProps) => {
       <path
         d="M922.49438,582.94415a.49659.49659,0,0,0,.15091-.06642l5.75315-3.76566a.49923.49923,0,0,0,.00032-.83621l-5.97978-3.91667a.49972.49972,0,1,0-.54792.83585l5.34091,3.49818-5.114,3.34794a.49991.49991,0,0,0,.39637.903Z"
         transform="translate(-206.59003 -163.87113)"
-        fill="#89b0ae"
+        fill={accentColour}
       />
       <path
         d="M913.40762,583.36319a.5.5,0,0,0,.12608-.91842l-5.30306-3.04034,5.1256-3.80723a.49963.49963,0,1,0-.596-.80208l-5.73862,4.26265a.49951.49951,0,0,0,.04918.83476l5.96525,3.41968A.4997.4997,0,0,0,913.40762,583.36319Z"
         transform="translate(-206.59003 -163.87113)"
-        fill="#89b0ae"
+        fill={accentColour}
       />
       <path
         d="M921.92215,586.24416a.48233.48233,0,0,0,.137-.05785.49976.49976,0,0,0,.16752-.68714l-8.15548-13.40836a.50026.50026,0,0,0-.85442.52058l8.15548,13.40835A.50035.50035,0,0,0,921.92215,586.24416Z"
         transform="translate(-206.59003 -163.87113)"
-        fill="#89b0ae"
+        fill={accentColour}
       />
       <rect
         x="209.38454"
@@ -730,7 +740,9 @@ export const DeveloperAtComputer = (props: PictogramProps) => {
         width="50.71916"
         height="10.8457"
         rx="3.26417"
-        fill="#89b0ae"
+        fill={accentColour}
+        onClick={() => dispatch({ type: AppReducerActionType.CYCLE_THEME })}
+        style={{ cursor: 'pointer' }}
       />
       <rect
         x="183.62601"

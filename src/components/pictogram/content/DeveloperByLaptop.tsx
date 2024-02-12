@@ -1,7 +1,12 @@
+import { useTheme } from "styled-components";
 import { Pictogram } from "../pictogram";
 import { PictogramProps } from "../pictogram.types";
 
 export const DeveloperByLaptop = (props: PictogramProps) => {
+  const theme = useTheme();
+
+  const accentColour = theme.colour.text.accent;
+
   return (
     <Pictogram
       xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +135,7 @@ export const DeveloperByLaptop = (props: PictogramProps) => {
         fill="#f2f2f2"
         style={{ isolation: "isolate" }}
       />
-      <circle cx="428.05798" cy="298.22423" r="60.3068" fill="#89b0ae" />
+      <circle cx="428.05798" cy="298.22423" r="60.3068" fill={accentColour} />
       <path
         d="M531.74082,575.21a75.01577,75.01577,0,1,1,75.01581-75.01575A75.01578,75.01578,0,0,1,531.74082,575.21Zm0-149.051A74.03519,74.03519,0,1,0,605.776,500.19428a74.03518,74.03518,0,0,0-74.03522-74.03521Z"
         transform="translate(-90.2579 -231.65939)"
@@ -169,7 +174,7 @@ export const DeveloperByLaptop = (props: PictogramProps) => {
         y="52.28163"
         width="24.49176"
         height="24.49173"
-        fill="#89b0ae"
+        fill={accentColour}
       />
       <path
         d="M1014.52225,319.8039h-29.74v-29.74h29.74Zm-28.4469-1.293h27.15381V291.357H986.07529Z"
