@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NavigationBar } from "@/components/navigation-bar/navigation-bar";
 import { AppProvider, AppStateContext } from "@/context/context";
 import GlobalStyle from "@/styles/globalStyles";
-import { appThemes } from "@/themes/themes";
+import { appThemes } from "@/themes";
 import { getCookie } from "cookies-next";
 
 export interface InitialProps {

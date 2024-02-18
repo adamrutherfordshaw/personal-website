@@ -1,4 +1,4 @@
-import { themeNames } from "@/themes/themes";
+import { themeNames } from "@/themes";
 import { AppReducerAction, AppReducerActionType, AppState } from "./types";
 import { setCookie } from "cookies-next";
 
