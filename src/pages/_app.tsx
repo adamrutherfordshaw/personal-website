@@ -1,21 +1,22 @@
-import type { AppProps } from "next/app";
+import { useContext } from "react";
+import App from "next/app";
+import type { AppContext, AppInitialProps, AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
+
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { NavigationBar } from "@/components/navigation-bar/navigation-bar";
-import GlobalStyle from "@/styles/globalStyles";
-import { useContext } from "react";
 import { AppProvider, AppStateContext } from "@/context/context";
+import GlobalStyle from "@/styles/globalStyles";
 import { appThemes } from "@/themes/themes";
 import { getCookie } from "cookies-next";
-import { NextPageContext } from "next";
 
 export interface InitialProps {
   themeName?: string;
 }
 
-export const App = (props: AppProps & InitialProps) => {
+export const AppWithContext = (props: AppProps & InitialProps) => {
   return (
     <AppProvider initialTheme={props.themeName}>
       <Website {...props} />
@@ -37,12 +38,16 @@ export const Website = ({ Component, pageProps }: AppProps) => {
   );
 }
 
-App.getInitialProps = ({ ctx }: { ctx: NextPageContext }): InitialProps => {
+AppWithContext.getInitialProps = async (context: AppContext): Promise<InitialProps & AppInitialProps> => {
+  const { ctx } = context;
   const themeName = getCookie("themeName", { req: ctx.req });
 
+  const initialProps = await App.getInitialProps(context)
+
   return {
+    ...initialProps,
     themeName,
   };
 }
 
-export default App;
+export default AppWithContext;
