@@ -13,8 +13,9 @@ export enum AppReducerActionType {
 }
 
 export enum ThemeName {
-    DEFAULT_THEME = "defaultTheme",
-    BEIGE_THEME = "beigeTheme"
+    BLUE = "blueTheme",
+    BEIGE = "beigeTheme",
+    LEMON = "lemonTheme"
 }
 
 export interface AppReducerActionSetTheme {

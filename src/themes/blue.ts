@@ -1,17 +1,17 @@
 import { DefaultTheme } from "styled-components";
 
-export const beigeTheme: DefaultTheme = {
+export const blueTheme: DefaultTheme = {
     colour: {
         text: {
-            light: "#E7ECEF",
-            dark: "#272932",
-            accent: "#D8A47F",
-            focus: "#F05D5E",
+            light: "#ffffff",
+            dark: "#1f1a3b",
+            accent: "#89B0AE",
+            focus: "#ffff00",
         },
         background: {
-            light: "#E7ECEF",
-            dark: "#272932",
-            accent: "#D8A47F",
+            light: "#E3DEDE",
+            dark: "#1f1a3b",
+            accent: "#89B0AE",
         },
     },
     spacing: {
@@ -22,3 +22,4 @@ export const beigeTheme: DefaultTheme = {
         five: "4rem",
     },
 };
+

@@ -1,17 +1,17 @@
 import { DefaultTheme } from "styled-components";
 
-export const theme: DefaultTheme = {
+export const lemonTheme: DefaultTheme = {
     colour: {
         text: {
-            light: "#ffffff",
-            dark: "#1f1a3b",
-            accent: "#89B0AE",
-            focus: "#ffff00",
+            light: "#FAFDF6",
+            dark: "#2D2A32",
+            accent: "#DDD92A",
+            focus: "#EEEFA8",
         },
         background: {
-            light: "#E3DEDE",
-            dark: "#1f1a3b",
-            accent: "#89B0AE",
+            light: "#FAFDF6",
+            dark: "#2D2A32",
+            accent: "#DDD92A",
         },
     },
     spacing: {
