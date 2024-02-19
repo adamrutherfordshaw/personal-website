@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle<{
           width: 100%;
           pointer-events: none;
           background: ${x && y
-          ? `radial-gradient(circle at ${x}px ${y}px, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 0%, 1) 9%)`
+          ? `radial-gradient(1500px circle at ${x}px ${y}px, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 0%, 1) 9%)`
           : "black"};
         }
       `: ''};
