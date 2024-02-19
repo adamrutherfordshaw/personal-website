@@ -1,17 +1,14 @@
 import { createContext, useReducer } from "react";
-import { AppProviderProps, AppReducerAction, AppState, ThemeName } from "./types";
+import { AppProviderProps, AppReducerAction, AppState } from "./types";
 import { initialState } from "./state";
 import { appReducer } from "./reducer";
 
 export const AppStateContext = createContext<AppState>({} as AppState);
 export const AppDispatchContext = createContext<React.Dispatch<AppReducerAction>>({} as React.Dispatch<AppReducerAction>);
 
-export const AppProvider = ({ children, initialTheme }: AppProviderProps) => {
-    if (initialTheme && Object.values<string>(ThemeName).includes(initialTheme)) {
-        initialState.theme = initialTheme as ThemeName;
-    }
+export const AppProvider = ({ children, stateFromCookies }: AppProviderProps) => {
 
-    const [state, dispatch] = useReducer(appReducer, initialState);
+    const [state, dispatch] = useReducer(appReducer, { ...initialState, ...stateFromCookies });
 
 
     return (

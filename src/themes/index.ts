@@ -1,4 +1,5 @@
 
+import { forestTheme } from "./forest";
 import { beigeTheme } from "./beige";
 import { blueTheme } from "./blue";
 import { lemonTheme } from "./lemon";
@@ -9,5 +10,6 @@ export const themeNames = Object.values(ThemeName);
 export const appThemes: AppThemes = {
     blueTheme,
     beigeTheme,
-    lemonTheme
+    lemonTheme,
+    forestTheme
 };

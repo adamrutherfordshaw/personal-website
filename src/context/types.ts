@@ -1,10 +1,11 @@
 export interface AppProviderProps {
     children: React.ReactNode;
-    initialTheme?: string;
+    stateFromCookies: Partial<AppState>;
 }
 
 export interface AppState {
     theme: ThemeName;
+    lightsOff: boolean;
 }
 
 export enum AppReducerActionType {
@@ -15,7 +16,8 @@ export enum AppReducerActionType {
 export enum ThemeName {
     BLUE = "blueTheme",
     BEIGE = "beigeTheme",
-    LEMON = "lemonTheme"
+    LEMON = "lemonTheme",
+    FOREST = "forestTheme",
 }
 
 export interface AppReducerActionSetTheme {
