@@ -5,8 +5,8 @@ export const forestTheme: DefaultTheme = {
         text: {
             light: "#F2EFE5",
             dark: "#172815",
-            accent: "#83781B",
-            focus: "#95B46A",
+            accent: "#95B46A",
+            focus: "#83781B",
         },
         background: {
             light: "#95B46A",
