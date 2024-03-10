@@ -8,7 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { NavigationBar } from "@/components/navigation-bar/navigation-bar";
 import { AppProvider, AppStateContext } from "@/context/context";
-import GlobalStyle from "@/styles/globalStyles";
+import { GlobalStyle, TorchStyle } from "@/styles/globalStyles";
 import { appThemes } from "@/themes";
 import { getCookie } from "cookies-next";
 import { AppState, ThemeName } from "@/context/types";
@@ -60,7 +60,8 @@ export const Website = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ThemeProvider theme={appThemes[theme]}>
-      <GlobalStyle x={mouseLocation.x} y={mouseLocation.y} lightsOff={lightsOff} />
+      {lightsOff && <TorchStyle x={mouseLocation.x} y={mouseLocation.y} />}
+      <GlobalStyle />
       <NavigationBar />
       <Component {...pageProps} />
       <Analytics />
