@@ -22,6 +22,13 @@ export const appReducer = (state: AppState, { type, payload }: AppReducerAction)
                 ...state,
                 theme: nextTheme,
             };
+        case AppReducerActionType.SET_LIGHTS_OFF:
+            setCookie("lightsOff", payload);
+
+            return {
+                ...state,
+                lightsOff: payload,
+            };
         default:
             return state;
     }

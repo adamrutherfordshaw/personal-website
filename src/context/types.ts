@@ -11,6 +11,7 @@ export interface AppState {
 export enum AppReducerActionType {
     SET_THEME = "SET_THEME",
     CYCLE_THEME = "CYCLE_THEME",
+    SET_LIGHTS_OFF = "SET_LIGHTS_OFF",
 }
 
 export enum ThemeName {
@@ -30,4 +31,9 @@ export interface AppReducerActionCycleTheme {
     payload?: never;
 }
 
-export type AppReducerAction = AppReducerActionSetTheme | AppReducerActionCycleTheme;
+export interface AppReducerActionSetLightsOff {
+    type: AppReducerActionType.SET_LIGHTS_OFF;
+    payload: boolean;
+}
+
+export type AppReducerAction = AppReducerActionSetTheme | AppReducerActionCycleTheme | AppReducerActionSetLightsOff;
