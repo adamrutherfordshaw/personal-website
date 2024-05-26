@@ -9,7 +9,7 @@ export const forestTheme: DefaultTheme = {
             focus: "#83781B",
         },
         background: {
-            light: "#95B46A",
+            light: "#C4E29C",
             dark: "#172815",
             accent: "#95B46A",
         },
