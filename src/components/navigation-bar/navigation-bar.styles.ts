@@ -78,6 +78,7 @@ export const OverlayNavContainer = styled.section<{ showingDrawer: boolean }>`
   position: absolute;
   background-color: ${({ theme }) => theme.colour.background.dark};
   color: ${({ theme }) => theme.colour.text.light};
+  z-index: 20;
 
   html:has(body > div > &) {
     overflow: ${({ showingDrawer }) => (showingDrawer ? "hidden" : "auto")};
