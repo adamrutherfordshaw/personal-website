@@ -48,6 +48,7 @@ export const SocialsContainer = styled.div`
 
 export const SocialLink = styled(Link)`
   display: flex;
+  z-index: 10;
 `;
 
 export const LinkedInLogo = styled(LinkedInIcon)``;
