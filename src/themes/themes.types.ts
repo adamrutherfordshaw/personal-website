@@ -1,8 +1,8 @@
 import { ThemeName } from "@/context/types";
-import { DefaultTheme } from "styled-components";
+import { Theme } from "styled-components";
 
 export type AppThemes = {
-    [key in ThemeName]: DefaultTheme;
+    [key in ThemeName]: Theme;
 };
 
 export { ThemeName };

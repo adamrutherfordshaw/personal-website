@@ -1,6 +1,6 @@
-import { DefaultTheme } from "styled-components";
+import { Theme } from "styled-components";
 
-export const forestTheme: DefaultTheme = {
+export const forestTheme: Theme = {
     colour: {
         text: {
             light: "#F2EFE5",
